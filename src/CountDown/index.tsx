@@ -4,6 +4,8 @@ import dayjs from "dayjs";
 
 import { HolidayItem } from "./types";
 
+import styles from "./index.module.css";
+
 export const holidayList: HolidayItem[] = [
   { id: "1", name: "元旦", day: new Date("2022-01-01") },
   { id: "2", name: "春节", day: new Date("2022-01-31") },
@@ -94,8 +96,8 @@ const CountDown = () => {
   };
 
   return (
-    <div className="count-down-container">
-      <List bordered className="count-down-list">
+    <div className={styles["count-down-container"]}>
+      <List bordered className={styles["count-down-list"]}>
         {currentHolidatList.map((item) => (
           <List.Item
             key={item.id}
